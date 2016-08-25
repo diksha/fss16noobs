@@ -1,4 +1,4 @@
-import utest
+import utest, diksha, rajat, ayush
 from utest import ok
 from utest import oks
 @ok
