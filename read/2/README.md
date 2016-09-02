@@ -16,7 +16,7 @@ _Al-Kofahi, A. Tamrawi, T. Nguyen, H. Nguyen, and T. Nguyen. Fuzzy set approach 
 - **Study instruments** - Use of IBM Jazz’s repository to get data and tag more desired information.
 
 - **Informative visualizations** - 
-![Flow-chart]({{site.baseurl}}/read/2/Screen Shot 2016-09-02 at 1.58.59 PM.png)
+![Flow-chart](https://github.com/diksha/fss16noobs/read/2/Screen Shot 2016-09-02 at 1.58.59 PM.png)
 - **Related work** - Despite the popularity of automatic tagging tools in Web environment and social computing technologies, there has not been many such tools in software development. TagSEA (Tags for Software Engineering Actitivies) supports social tagging and communication among developers via tags and user-defined navigational structures [10], [11]. Other types of tools supporting for tagging in source code include GNU Global [12], social bookmarking in Code Snipets [13], Byte- Mycode [14]. Unlike our tool, these tools focus on source code and have limited supports for other types of software artifacts. Poshyvanyk et al.  [15] use Latent Semantic Indexing (LSI).
 
 - **New results** - The empirical evaluation on the real-world IBM Jazz project shows that TagRec is time efficient and well-suitable for interactive uses in daily development. Importantly, it is very accurate with high recall (76%) and precision (50%). 
