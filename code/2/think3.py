@@ -58,3 +58,22 @@ def draw_grid():
 draw_grid()
 
 # Exercise 3.5, Part 2
+
+def do_Ntimes_large(f, n = 1):
+    for i in xrange(n):
+        f()
+
+def draw_border_large():
+    print " ".join("-"*4).join([' + ']*4)
+
+def draw_row_large():
+    print ' |', " "*7, '|', " "*7, '|', " "*7, '|'
+
+def draw_grid_large():
+    for i in xrange(9): 
+        if i%2 == 0:
+            do_Ntimes_large(draw_border_large, 1)
+        else:
+            do_Ntimes_large(draw_row_large, 4)
+    
+draw_grid_large()
