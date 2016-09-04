@@ -1,3 +1,5 @@
+import sys
+
 # Exercise 3.1, 3.2
 
 def repeat_lyrics():
@@ -59,21 +61,22 @@ draw_grid()
 
 # Exercise 3.5, Part 2
 
-def do_Ntimes_large(f, n = 1):
+def do_Ntimes_large(f, arg, n = 1):
     for i in xrange(n):
-        f()
+        f(arg)
 
-def draw_border_large():
-    print " ".join("-"*4).join([' + ']*4)
+def draw_border_large(N):
+    print "-".join(" "*5).join(['+']*(N+1))
 
-def draw_row_large():
-    print ' |', " "*7, '|', " "*7, '|', " "*7, '|'
+def draw_row_large(N):
+    print (" "*9).join(["|"]*(N+1))
 
-def draw_grid_large():
-    for i in xrange(9): 
+def draw_grid_large(N):
+    for i in xrange(2*N+1): 
         if i%2 == 0:
-            do_Ntimes_large(draw_border_large, 1)
+            do_Ntimes_large(draw_border_large, N, 1)
         else:
-            do_Ntimes_large(draw_row_large, 4)
-    
-draw_grid_large()
+            do_Ntimes_large(draw_row_large, N, 4)
+
+GRID_SIZE=4 #MATRIX printed will be of size GRID_SIZExGRID_SIZE
+draw_grid_large(GRID_SIZE)
