@@ -18,6 +18,14 @@
 
 ![Flow-chart](screenshots/3.5_2.png)
 
+## 4.2
+
+![Flow-chart](screenshots/think4_2.png)
+
+## 4.3
+
+![Flow-chart](screenshots/think4_3.png)
+
 ## Arbitrary size 
 
 ![Flow-chart](screenshots/3.5_large.png)
