@@ -22,8 +22,8 @@ ment and knowledge management. C. de Souza, J. Froehlich, and P. Dourish claim t
 
 - **Informative visualizations**
 <br/><br/>
-<img src="screenshots/Screen Shot 2016-09-09 at 5.12.09 PM.png" alt="Drawing" width="60%" height="60%"/> <br/>
-<img src="screenshots/Screen Shot 2016-09-09 at 5.12.40 PM.png" alt="Drawing" width="60%" height="60%"/> <br/>
+<img src="screenshots/Screen Shot 2016-09-09 at 5.12.09 PM.png" alt="Drawing" width="50%" height="50%"/>
+<img src="screenshots/Screen Shot 2016-09-09 at 5.12.40 PM.png" alt="Drawing" width="50%" height="50%"/>
 
 - **Future Work** - In future, the benefits of social computing mechanisms can be examined in other areas of software engineering. Exploring, which social networks emerge in software development between authors of work items, owners of work items, and tag authors, may result in better collaborative software development tool support.
 
