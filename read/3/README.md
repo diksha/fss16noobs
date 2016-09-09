@@ -21,7 +21,7 @@ How tagging helps bridge the gap between social and technical aspects in softwar
 ment and knowledge management. C. de Souza, J. Froehlich, and P. Dourish claim that source code is both a social and a technical artifact and that dependencies do not only exist between artifacts but also between developers. In a previous study on source code annotations, Storey and team report on how annotations are used to document both technical and articulation activities. Grinter also describes how configuration management tools are sometimes co-opted for articulation work, despite the fact that they have significant shortcomings in supporting articulation work
 
 - **Informative visualizations**
-<img src="screenshots/Screen Shot 2016-09-09 at 5.12.09 PM.png" alt="Drawing" style="width: 100px;"/>
+<img src="screenshots/Screen Shot 2016-09-09 at 5.12.09 PM.png" alt="Drawing" style="width: 100px!important;"/>
 <img src="screenshots/Screen Shot 2016-09-09 at 5.12.40 PM.png" alt="Drawing" style="width: 100px;"/>
 
 - **Future Work** - In future, the benefits of social computing mechanisms can be examined in other areas of software engineering. Exploring, which social networks emerge in software development between authors of work items, owners of work items, and tag authors, may result in better collaborative software development tool support.
