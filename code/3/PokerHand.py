@@ -130,16 +130,19 @@ class PokerHand(Hand):
 
 
 if __name__ == '__main__':
-    random.seed(1490)
+    #random.seed(1)
     # make a deck
-    deck = Deck()
-    deck.shuffle()
-
+    labelCount = {'straightflush':0, 'fourkind':0, 'fullhouse':0, 'flush':0,
+                  'straight':0, 'threekind':0, 'twopair':0, 'pair':0, 'highcard':0}
     # deal the cards and classify the hands
-    for i in xrange(7):
-        hand = PokerHand()
-        deck.move_cards(hand, 7)
-        hand.sort()
-        print hand
-        print hand.findLabel()
-        print ''
+    for j in xrange(1000) :
+        deck = Deck()
+        deck.shuffle()
+        for i in xrange(7):
+            hand = PokerHand()
+            deck.move_cards(hand, 7)
+            hand.sort()
+            labelCount[hand.findLabel()]+=1
+    
+    for key in labelCount:
+        print "Probability of ", key, " ", labelCount[key]/7000.0
