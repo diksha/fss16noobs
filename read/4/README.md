@@ -22,9 +22,9 @@ Friday, June 23 and the morning of Monday June 27, 2005. Both of the datasets we
 
 - **Informative visualizations**
 <br/><br/>
-<img src="screenshots/AdditionBookMarkOverTime.png" alt="Drawing" width="50%" height="50%"/>
 <img src="screenshots/growthRate.png" alt="Drawing" width="50%" height="50%"/>
 <img src="screenshots/RankBookMark.png" alt="Drawing" width="50%" height="50%"/>
+<img src="screenshots/AdditionBookMarkOverTime.png" alt="Drawing" width="50%" height="50%"/>
 
 - **Future Work** - This is a collaborative way of tagging. In future its expected that the sites will continue to provide fertile ground for studying computer mediated collaborative systems and these will further help in automate the process of tagging on the basis of user behaviour
 
