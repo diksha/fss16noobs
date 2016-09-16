@@ -1,37 +1,39 @@
 ### Team D
 
 ### Reference
-How tagging helps bridge the gap between social and technical aspects in software development
+Usage patterns of collaborative tagging systems
 
 ### Keywords 
 
 - **Tagging** - tagging is a lightweight yet very useful mechanism in helping in developers’ communication and bridging the gap between social and technical aspects [2]. It provides a simple way for annotations in which a developer could tag his artifacts so that others could search and find them. 
 
-- **Collaborative Software** - Collaborative software or groupware is an application software designed to help people involved in a common task to achieve their goals. One of the earliest definitions of collaborative software is 'intentional group processes plus software to support them.'
+- **Homonymy** - Word has multiple unrelated meanings
 
-- **Social networking service** -  (also called as social networking site, SNS or social media) is an online platform that is used by people to build social networks or social relations with other people who share similar personal or career interests, activities, backgrounds or real-life connections.
+- **Sense making** -  Sense making is the process in which information is categorized and labeled and, critically, through which meaning emerges.
 
-- **Software development process** - is a splitting of software development work into distinct phases (or stages) containing activities with the intent of better planning and management. It is often considered a subset of the systems development life cycle.
+- **Del.icio.us** - Is a collaborative tagging system for web bookmarks. Its creator, Joshua Schachter, calls it a 'social bookmarks manager'.
 
 ### Notes
 
-- **Study Instruments** - The quantitative data used in the study involved using softwares built using IBM’s Jazz tool. For qualitative data, several interviews were conducted with the software developers focused on how and why they used tags.
+- **Study Instruments** - Data was Delicious was analysed to uncover patterns among users, tags and URLS. The analysis was performed on two sets of Delicious data, which were retrieved between the morning of
+Friday, June 23 and the morning of Monday June 27, 2005. Both of the datasets were created by first retrieving public RSS feeds and then crawling a portion of the website
 
-- **Related Work** - There are at least three strands of research that have considered the impact of social aspects in software development: global software development, open source develop-
-ment and knowledge management. C. de Souza, J. Froehlich, and P. Dourish claim that source code is both a social and a technical artifact and that dependencies do not only exist between artifacts but also between developers. In a previous study on source code annotations, Storey and team report on how annotations are used to document both technical and articulation activities. Grinter also describes how configuration management tools are sometimes co-opted for articulation work, despite the fact that they have significant shortcomings in supporting articulation work
+- **Pattern** - The combined tags of many users’ bookmarks give rise to a stable pattern in which the proportions of each tag are nearly fixed. Empirically, usually after the first 100 or so bookmarks, each tag’s frequency is a nearly fixed proportion of the total frequency of all tags used. This stable pattern can be explained by resorting to the dynamics of a stochastic urn model originally proposed by Eggenberger and Polya to model disease contagion 
 
 - **Informative visualizations**
 <br/><br/>
-<img src="screenshots/Screen Shot 2016-09-09 at 5.12.09 PM.png" alt="Drawing" width="50%" height="50%"/>
-<img src="screenshots/Screen Shot 2016-09-09 at 5.12.40 PM.png" alt="Drawing" width="50%" height="50%"/>
+<img src="screenshots/AdditionBookMarkOverTime.png" alt="Drawing" width="50%" height="50%"/>
+<img src="screenshots/growthRate.png" alt="Drawing" width="50%" height="50%"/>
+<img src="screenshots/RankBookMark.png" alt="Drawing" width="50%" height="50%"/>
 
-- **Future Work** - In future, the benefits of social computing mechanisms can be examined in other areas of software engineering. Exploring, which social networks emerge in software development between authors of work items, owners of work items, and tag authors, may result in better collaborative software development tool support.
+- **Future Work** - This is a collaborative way of tagging. In future its expected that the sites will continue to provide fertile ground for studying computer mediated collaborative systems and these will further help in automate the process of tagging on the basis of user behaviour
+
 
 ### Needs Improvement
 
-- The qualitative data collected for the experiments involved only 4 software developer participants with varying experience. The experimental results could benefit by including more participants in the study and uniform background.
-- The work item category tree was significantly altered during the course of project since the component-specific tags for the subcategories largely depends on the categories already available. The results might differ if the categories are pre-defined before the development begins.
-- The primary data source for the study in IBM Jazz tool and there were limited number of users of this tool. As more developers start using this new tool and if the data can be collected from other contemporary tools, the results can be more robust.
+- This is a manual way of tagging. The data provided shows how the trends of a user tagging with a particular keyword increases with number of bookmarks and there is a pattern followed. 
+- This pattern can therefore be used to automatically tag some context with some machine learning paradigm. There are various kinds of tags and this information can be used for categorization.
+- Tags themselves vary in frequency of use, as well as in what they describe. This paper was focused on the findings from Delicious, however which might only be a case with users using delicious. Findings need to be on a more diversed platform and on diverse set of data.
 
 
 
