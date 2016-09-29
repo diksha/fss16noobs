@@ -64,4 +64,5 @@ def sa():
     print("\n\nBest solution by simulated annealing x = %f with normalized energy = %f ." % (sb, eb))
     return sb
 
+
 sa()
