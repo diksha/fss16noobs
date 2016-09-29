@@ -1,4 +1,8 @@
 Output after running 1000 iterations (each line having 25 iterations):
+
+Format for each line:
+iteration, energy, updates
+
 <pre>
 <code>
 Initial x = 14280.518938 and energy = 0.020391
