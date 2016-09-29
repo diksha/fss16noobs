@@ -4,13 +4,16 @@ import math
 
 seed(10)
 
+# Set min and max values of x
+max_x = 10**5
+min_x = -10**5
+
 def energy(x):
     """
-    Returns energy of given solution 
+    Returns normalized energy of given solution 
     """
     f1 = x**2           # Function 1 of Schaffer
     f2 = (x-2)**2       # Function 2 of Schaffer
-    max_x = 10**15
     max = (max_x)**2 + (max_x-2)**2
     min_x = 1
     min = (min_x)**2 + (min_x-2)**2
@@ -26,19 +29,22 @@ def sa():
     """
     Runs simulated annealing for Schaffer model
     """
-    s = uniform(10**(-15), 10**(15))
+    s = uniform(min_x, max_x)
     e = energy(s)
+    
+    print ("Initial x = %f and energy = %f" % (s, e))
+    
     sb = s
     eb = e
     k = 1
     kmax = 1000
-    max_x = 10**15
-    emax = energy(max_x) - 1.01
+    epsilon = 1.01
+    emax = energy(max_x) - epsilon
    
-    while k < kmax and e > emax:
+    while k < kmax and eb > emax:
         if k == 1 or k % 25 == 0: 
-            print("\n%d, %.2f, " % (k, eb), end="")     #Print the evaluation
-        sn = uniform(10**(-15), 10**(15))   # Pick some neighbour
+            print("\n%d, %f, " % (k, eb), end="")     #Print the evaluation
+        sn = uniform(min_x, max_x)   # Pick some neighbour
         en = energy(sn)                     # Compute its energy
         if en < eb:                         # New best found, update best
             sb = sn
@@ -55,6 +61,7 @@ def sa():
         else:
             print(".", end="")
         k += 1
+    print("\n\nBest solution by simulated annealing x = %f with normalized energy = %f ." % (sb, eb))
     return sb
 
 sa()
