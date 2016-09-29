@@ -45,8 +45,8 @@ Initial x = 14280.518938 and energy = 0.020391
 975, 0.000001, ..?+..+........+......?++
 
 Best solution by simulated annealing x = 74.976521 with normalized energy = 0.000001 .
-
- 
  </code>
- 
  </pre>
+
+# Screenshot
+<img src="http://www.giphy.com/gifs/l3vRfsAyw14vjyFna" />
