@@ -49,4 +49,4 @@ Best solution by simulated annealing x = 74.976521 with normalized energy = 0.00
  </pre>
 
 # Screenshot
-<img src="http://www.giphy.com/gifs/l3vRfsAyw14vjyFna" />
+<img src="https://media.giphy.com/media/l3vRfsAyw14vjyFna/giphy.gif" />
