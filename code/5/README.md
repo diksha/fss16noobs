@@ -27,3 +27,4 @@ best solution: [5.0, 1.0, 4.4, 0.0, 2.9999999999999996, 7.0]
 best score: 0.1410041841
  </code>
  </pre>
+ <img src="maxwalksat_output.png" alt="Drawing" width="60%" height="60%"/>
