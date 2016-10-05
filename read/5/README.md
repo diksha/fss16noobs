@@ -1,24 +1,26 @@
 ### Team D
 
 ### Reference
-Usage patterns of collaborative tagging systems
+What makes a good coding example? A study of programming Q&A in StackOverflow
 
 ### Keywords 
 
-- **Tagging** - tagging is a lightweight yet very useful mechanism in helping in developers’ communication and bridging the gap between social and technical aspects [2]. It provides a simple way for annotations in which a developer could tag his artifacts so that others could search and find them. 
+- **Code Example** - This specifies what kind of code is actually helpful to developers and maintainers to solve problems and which are not helpful to them.
 
-- **Homonymy** - Word has multiple unrelated meanings
+- **Documentation** - This specifies that the documentation of the code in stack overflow answer is as important as the code itself.
 
-- **Sense making** -  Sense making is the process in which information is categorized and labeled and, critically, through which meaning emerges.
+- **API** -  Application program interface is a set of routines, protocols, and tools for building software applications. An API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components.
 
-- **Del.icio.us** - Is a collaborative tagging system for web bookmarks. Its creator, Joshua Schachter, calls it a 'social bookmarks manager'.
+- **Social Learning** - It is a method of participating with others to make sense of new ideas. Sharing thoughts on stack overflow is a good example of social learning
 
 ### Notes
 
-- **Study Instruments** - Data was Delicious was analysed to uncover patterns among users, tags and URLS. The analysis was performed on two sets of Delicious data, which were retrieved between the morning of
-Friday, June 23 and the morning of Monday June 27, 2005. Both of the datasets were created by first retrieving public RSS feeds and then crawling a portion of the website
+- **Study Instruments** - Data collected was from stack overflow. The code example selected was from the Q&A thread that <br>
+  a. Contains an answer with relatively high score.<br>
+  b. Answer should contain a code<br>
+  Crawling done on 150000 pages and resulted in 497 pages with that attribute
 
-- **Pattern** - The combined tags of many users’ bookmarks give rise to a stable pattern in which the proportions of each tag are nearly fixed. Empirically, usually after the first 100 or so bookmarks, each tag’s frequency is a nearly fixed proportion of the total frequency of all tags used. This stable pattern can be explained by resorting to the dynamics of a stochastic urn model originally proposed by Eggenberger and Polya to model disease contagion 
+- **Pattern** - These were the attributes of recognize
 
 - **Informative visualizations**
 <br/><br/>
