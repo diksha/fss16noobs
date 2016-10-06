@@ -20,22 +20,26 @@ What makes a good coding example? A study of programming Q&A in StackOverflow
   b. Answer should contain a code<br>
   Crawling done on 150000 pages and resulted in 497 pages with that attribute
 
-- **Pattern** - These were the attributes of recognize
+- **Pattern** - These were the attributes of recognized answers
+1. Consise code
+2. Using question context
+3. Highlighting important elements
+4. Step-by-step solution
+5. Providing links to extra resources
 
 - **Informative visualizations**
 <br/><br/>
-<img src="screenshots/growthRate.png" alt="Drawing" width="50%" height="50%"/>
-<img src="screenshots/RankBookMark.png" alt="Drawing" width="50%" height="50%"/>
-<img src="screenshots/AdditionBookMarkOverTime.png" alt="Drawing" width="50%" height="50%"/>
+<img src="screenshots/answerScores.png" alt="Drawing" width="50%" height="50%"/>
+<img src="screenshots/questionTypes.png" alt="Drawing" width="50%" height="50%"/>
+<img src="screenshots/codeContaining.png" alt="Drawing" width="50%" height="50%"/>
 
-- **Future Work** - This is a collaborative way of tagging. In future its expected that the sites will continue to provide fertile ground for studying computer mediated collaborative systems and these will further help in automate the process of tagging on the basis of user behaviour
+- **Future Work** - Findings were made that code examples and explanations are inseparable elements of recognized answers. Using these findings the author looks forward to combining the findings on automated tests and study their effects on developers learning experinece
 
 
 ### Needs Improvement
 
-- This is a manual way of tagging. The data provided shows how the trends of a user tagging with a particular keyword increases with number of bookmarks and there is a pattern followed. 
-- This pattern can therefore be used to automatically tag some context with some machine learning paradigm. There are various kinds of tags and this information can be used for categorization.
-- Tags themselves vary in frequency of use, as well as in what they describe. This paper was focused on the findings from Delicious, however which might only be a case with users using delicious. Findings need to be on a more diversed platform and on diverse set of data.
-
+- Authors criteria for building our sample might be regarded as too restrictive (focusing on Java Q&A and using threads containing code examples with relatively high score). There might be a lot of recognized answers without code, but would barely provide much insight into reaching our goal.
+- Another limiting assumption of their study was the score of answers. They assumed that answers with higher scores generally mean better solutions; however, other factors such as answer posting time, the question topic, and the responder identity might affect these numbers.
+- The generalizability of our findings could be regarded as another limitation. 
 
 
