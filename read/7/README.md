@@ -5,13 +5,13 @@ Towards Discovering the Role of Emotions in Stack Overflow
 
 ### Keywords 
 
-- **Code Example** - This specifies what kind of code is actually helpful to developers and maintainers to solve problems and which are not helpful to them.
+- **Sentiment Analysis** - Sentiment analysis involves classifying opinions in text into categories like "positive" or "negative" often with an implicit category of "neutral".
 
-- **Documentation** - This specifies that the documentation of the code in stack overflow answer is as important as the code itself.
+- **Experimental Design** - Experimental design is the process of planning a study to meet specified objectives. Planning an experiment properly is very important in order to ensure that the right type of data and a sufficient sample size and power are available to answer the research questions of interest as clearly and efficiently as possible. 
 
-- **API** -  Application program interface is a set of routines, protocols, and tools for building software applications. An API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components.
+- **Technical Forum (e.g. StackOverflow)** -  A Technical forum, is an online discussion site where people can hold conversations about various technical issues/questions in the form of posted messages. These questions are often answered by members of the same community.
 
-- **Social Learning** - It is a method of participating with others to make sense of new ideas. Sharing thoughts on stack overflow is a good example of social learning
+- **Social Learning** - It is a method of participating with others to make sense of new ideas. Sharing thoughts on stack overflow is a good example of social learning.
 
 ### Notes
 
