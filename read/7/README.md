@@ -27,8 +27,8 @@ Towards Discovering the Role of Emotions in Stack Overflow
 5. Providing links to extra resources
 
 - **Related work** - 
-1. Study for sentiments in Github commits performed by Guzman et al. shows evidence of correlation of negative sentiment with commit activity performed on Monday in 29 GitHub projects.
-2. Mitra and Gilbert present a study on the cognitive and affective style of communication that happen on the Kickstarter platform in order to predict the success of crowdfunding requests.
+  1. Study for sentiments in Github commits performed by Guzman et al. shows evidence of correlation of negative sentiment with commit activity performed on Monday in 29 GitHub projects.
+  2. Mitra and Gilbert present a study on the cognitive and affective style of communication that happen on the Kickstarter platform in order to predict the success of crowdfunding requests.
 
 - **Future Work** - Findings were made that code examples and explanations are inseparable elements of recognized answers. Using these findings the author looks forward to combining the findings on automated tests and study their effects on developers learning experinece
 
