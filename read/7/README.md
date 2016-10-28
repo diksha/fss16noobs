@@ -19,18 +19,15 @@ Towards Discovering the Role of Emotions in Stack Overflow
   a. 7,214,802 questions with 58% having accepted answers.<br>
   b. 12,609,623 answers and 36,923 tags.<br>
 
-- **Pattern** - These were the attributes of recognized answers
-1. Consise code
-2. Using question context
-3. Highlighting important elements
-4. Step-by-step solution
-5. Providing links to extra resources
+- **Commentary** - Various existing open-source and popular scripts and libraries are used in this research:
+  1. Stanford CoreNLP package is used for performing sentiment analysis on sentences.
+  2. Affective word classes are defined in the Linguistic Inquiry and Word Count taxonomy (LIWC) developed in the scope of psycholinguistic research.
 
 - **Related work** - 
   1. Study for sentiments in Github commits performed by Guzman et al. shows evidence of correlation of negative sentiment with commit activity performed on Monday in 29 GitHub projects.
   2. Mitra and Gilbert present a study on the cognitive and affective style of communication that happen on the Kickstarter platform in order to predict the success of crowdfunding requests.
 
-- **Future Work** - Findings were made that code examples and explanations are inseparable elements of recognized answers. Using these findings the author looks forward to combining the findings on automated tests and study their effects on developers learning experinece
+- **Future Work** - The overall goal of our ongoing research is to investigate the role played by emotion lexicon in online Q&A websites, with a particular focus on Stack Overflow. The research is expected to help practitioners and other researchers who intend to improve emotional interface design. 
 
 
 ### Needs Improvement
