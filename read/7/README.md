@@ -33,5 +33,5 @@ Towards Discovering the Role of Emotions in Stack Overflow
 
 ### Needs Improvement
   - Authors have not provided evidence of concrete applications of the results that will come from after the research is performed.
-  - 
-  - The generalizability of our findings could be regarded as another limitation. 
+  - The reputation score of users in Stack Overflow evolve over time, so it's important to incorporate the growing score of users.
+  - The generalizability of their findings for different technical/non-technical forums can be considered as another limitation. 
