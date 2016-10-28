@@ -9,16 +9,15 @@ Towards Discovering the Role of Emotions in Stack Overflow
 
 - **Experimental Design** - Experimental design is the process of planning a study to meet specified objectives. Planning an experiment properly is very important in order to ensure that the right type of data and a sufficient sample size and power are available to answer the research questions of interest as clearly and efficiently as possible. 
 
-- **Technical Forum (e.g. StackOverflow)** -  A Technical forum, is an online discussion site where people can hold conversations about various technical issues/questions in the form of posted messages. These questions are often answered by members of the same community.
+- **Technical Forum (e.g. Stack Overflow)** -  A Technical forum, is an online discussion site where people can hold conversations about various technical issues/questions in the form of posted messages. These questions are often answered by members of the same community.
 
 - **Social Learning** - It is a method of participating with others to make sense of new ideas. Sharing thoughts on stack overflow is a good example of social learning.
 
 ### Notes
 
-- **Study Instruments** - Data collected was from stack overflow. The code example selected was from the Q&A thread that <br>
-  a. Contains an answer with relatively high score.<br>
-  b. Answer should contain a code<br>
-  Crawling done on 150000 pages and resulted in 497 pages with that attribute
+- **Study Instruments** - Pubic data dump from Stack Overflow was used in the study. This includes all the questions, answers, votes and tags between 2008 to 2014. This data contains:<br>
+  a. 7,214,802 questions with 58% having accepted answers.<br>
+  b. 12,609,623 answers and 36,923 tags.<br>
 
 - **Pattern** - These were the attributes of recognized answers
 1. Consise code
