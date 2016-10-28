@@ -11,7 +11,7 @@ Towards Discovering the Role of Emotions in Stack Overflow
 
 - **Technical Forum (e.g. Stack Overflow)** -  A Technical forum, is an online discussion site where people can hold conversations about various technical issues/questions in the form of posted messages. These questions are often answered by members of the same community.
 
-- **Social Learning** - It is a method of participating with others to make sense of new ideas. Sharing thoughts on stack overflow is a good example of social learning.
+- **Social Factors** - The users’ status, expressed through reputation score and badges unlocked, resulted among the best predictors of success of a user.
 
 ### Notes
 
