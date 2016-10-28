@@ -26,12 +26,13 @@ Towards Discovering the Role of Emotions in Stack Overflow
 - **Related work** - 
   1. Study for sentiments in Github commits performed by Guzman et al. shows evidence of correlation of negative sentiment with commit activity performed on Monday in 29 GitHub projects.
   2. Mitra and Gilbert present a study on the cognitive and affective style of communication that happen on the Kickstarter platform in order to predict the success of crowdfunding requests.
+  3. Pletea et al. [19] performed a study on sentiment analysis of comments in GitHub discussion on security, assigning positive/negative/neutral scores to comments and pull requests from 90 GitHub projects.
 
 - **Future Work** - The overall goal of our ongoing research is to investigate the role played by emotion lexicon in online Q&A websites, with a particular focus on Stack Overflow. The research is expected to help practitioners and other researchers who intend to improve emotional interface design. 
 
 
 ### Needs Improvement
 
-- Authors criteria for building our sample might be regarded as too restrictive (focusing on Java Q&A and using threads containing code examples with relatively high score). There might be a lot of recognized answers without code, but would barely provide much insight into reaching our goal.
-- Another limiting assumption of their study was the score of answers. They assumed that answers with higher scores generally mean better solutions; however, other factors such as answer posting time, the question topic, and the responder identity might affect these numbers.
+- Authors have not provided evidence of concrete applications of the results that will come from after the research is performed.
+- 
 - The generalizability of our findings could be regarded as another limitation. 
