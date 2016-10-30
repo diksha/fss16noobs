@@ -30,7 +30,7 @@ Prior work on community Q&A services focused on studying the dynamics of communi
 Moderators can use the classifier to predict questions likely to have delayed responses and can consider taking actions to promote an earlier response, such as editing the question or routing the question to an expert member and identifying the quality of a question is a future work which can help in this regard.	
 
 ### Needs Improvement
-- The study seems to be a abstract and I think it requires some more digging into the reasons surrounding the unanswered SO questions. 
+- The study seems to be abstract and I think it requires some more digging into the reasons surrounding the unanswered SO questions. 
 - Maybe an interview with moderators or the well reputed members of the community can help understand the problem better. I feel that the user surveys and some more study instruments should have been used to dig deep into the problem.
 - Also, the study fails to highlight the fact that over the past 2 years, a great increase in number of people using stackoverflow.com might have also resulted in the increase in number of unanswered questions. There seems to be some missing data.  
 
