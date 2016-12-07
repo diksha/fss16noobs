@@ -60,13 +60,11 @@ def de(max     = 100,  # number of repeats
         if total/n > (1 - epsilon): 
           break
       return frontier
-      ```
+```
       
 Binary Dominator
 
 ```
-:
-
 def bdom(self):
     candidates = self.candidates
         n = self.num_candidates
