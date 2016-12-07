@@ -8,7 +8,7 @@ $ python main.py
 Various optimizers based on evolutionary algorithms are metaheuristics, meaning they do not guarantee a global optima. Hence in order to increase our chances of reaching the global optima, it’s important to run an optimizer on a problem for multiple “eras”, each era containing multiple evaluations. However, there is a chance that an optimizer will find a near-optima before all the evaluations/iterations finish. In this case, the optimizer produces no better result after it has found a near-optima and it can be stopped. Detecting when to stop further evaluations of the optimizer is the primary objective of this experiment. By implementing 3 different ways to detect this “early termination” criteria for Simulated annealing, MaxWalkSat and Differential Evolution, we compare their results to demonstrate which optimizer among these is best suited for DTLZ7 model.
 
 
-### Background
+### Introduction
 
 
 #### Simulated annealing
@@ -23,23 +23,17 @@ Since it requires only the best solution and current solution in memory, it is a
 #### Max-walkSat
 MaxWalkSat is a non-parametric stochastic method for sampling the landscape of the local region. MaxWalkSat introduces the idea of local search along with global search. The idea is that - when randomly searching a space by mutating all dimensions, sometimes fixate on improving things on just one dimension, i.e. you fixate on one variable and try all it’s values. 70-75% of the time we perform local search and remaining time we perform global search. Also there is a concept of retries - when you know that this solution isn’t going any closer to optimized one, forget everything and restart.
 
-
-
-
 Historically, it is a very successful algorithm - it can quickly find solutions for otherwise time consuming problems like Latin Square. 
-
 
 #### Differential Evolution
 Differential Evolution is a method that optimizes a problem by iteratively trying to improve a candidate solution with regard to a given measure of quality. Such methods are commonly known as meta heuristics as they make few or no assumptions about the problem being optimized and can search very large spaces of candidate solutions. However, meta heuristics such as DE do not guarantee an optimal solution is ever found.
 
-
 DE is used for multidimensional real-valued functions but does not use the gradient of the problem being optimized, which means DE does not require for the optimization problem to be differentiable as is required by classic optimization methods such as gradient descent and quasi-newton methods. DE can therefore also be used on optimization problems that are not even continuous, are noisy, change over time, etc.
-
 
 DE optimizes a problem by maintaining a population of candidate solutions and creating new candidate solutions by combining existing ones according to its simple formulae, and then keeping whichever candidate solution has the best score or fitness on the optimization problem at hand. In this way the optimization problem is treated as a black box that merely provides a measure of quality given a candidate solution and the gradient is therefore not needed. [8]
 
+#### Scott-knott and Effect size tests
 
-### Scott-knott and Effect size tests
 Scott-Knott (SK) is a hierarchical clustering algorithm used a tool for exploratory data analysis. 
 It was designed to help researchers working with an ANOVA experiment, wherein the comparison of treatment means is an important step in order, to find distinct homogeneous groups of those means whenever the situation leads to a significant F-test.
 The SK procedure uses a clever algorithm of cluster analysis, where, starting from the whole group of observed mean effects, it divides, and keeps dividing the subgroups in such a way that the intersection of any of the two formed groups remains empty. In the words of A.J. Scott and M. Knott: "We study the consequences of using a well-known method of cluster analysis to partition the sample treatment means in a balanced design and show how a corresponding likelihood ratio test gives a method of judging the significance of the difference among groups obtained". [7]
@@ -47,66 +41,53 @@ The SK procedure uses a clever algorithm of cluster analysis, where, starting fr
 
 Effect size is a simple way of quantifying the difference between two groups that has many advantages over the use of tests of statistical significance alone. Effect size emphasises the size of the difference rather than confounding this with sample size. [9]
 
-
 ### Approach and Implementation
 Following are the three optimizers compared for early termination:
+
 1. Simulated Annealing (SA)
 2. MaxWalkSat (MWS)
 3. Differential Evolution (DE)
 
-
 If the code runs in "eras" of, say, 100 evals per era, how to test in era X that there has been no future improvement expected? For this we use following 3 comparators:
-
 
 ##### Type 1 comparator:
 The simplest way to detect early termination is to just compare median performance scores for individuals of a population. The performance score used is Continuous Domination (CDom) as it tends to perform better than Binary Domination (BDom) because it compares individuals in a way that score is proportional to dominance. Also, with more number of objectives, CDom tends to perform better than BDom. Differences between Xi and Yi are registered on an exponential scale, so any differences SHOUT louder.
 
-
 ##### Type 2 comparator
 Use effect size tests to just if the performance scores are not changing between two consecutive eras. When the improvement in scores between two eras is not significant, it is an indication of early termination.
 
-
 The Vargha and Delaney's A12 statistic is used to compare two consecutive eras. According to Vargha and Delaney, a small difference between two populations is 56% or less. Thus 0.56 was used as the threshold.
-
 
 Krall's Bstop [8] method is incorporated to come up with the number of eras that should be added or subtracted.
 
 
 Pseudo-code for type 2 comparator:
-```python
+```unix
 Krall's Bstop method:
 * For each objective do
-If any "improvement", give yourself five more lives
-Here, "improvement" could be
-Sort the values for that objective in era and era+1
-Run the fast a12 test to check for true difference
-Be mindful of objectives minimizing or maximizing.
-* If no improvement on anything,
-Lives - 1
+   If any "improvement", give yourself five more lives
+   Here, "improvement" could be
+       Sort the values for that objective in era and era+1
+       Run the fast a12 test to check for true difference
+       Be mindful of objectives minimizing or maximizing.
+   * If no improvement on anything,
+       Lives - 1
 
 
 ```
 
-
-
-
 ##### Type 3 comparator
 For type3, we use effect size + hypothesis test (bootstrap) to judge no improvement in final era of multiple optimizers. 500 bootstraps was used with A12 and Scott-Knott. The stat.py contains rdivdemo method that tabulates the results in following manner showing median and inter-quartile range.
 
-
 ### Results
 
-
 Number of early terminations achieved by the 3 optimizers:
-
 
 | Optimizer | Average  #Early terminations  |
 |-----------|-------------------------------------|
 | Simulated Annealing        | 4                             |
 | MaxWalkSat       | 7                              |
 | Differential Evolution        | 13                              |
-
-
 
 
 Output:
@@ -177,9 +158,7 @@ rank ,         name ,    med   ,  iqr
 
 ```
 
-
 Below is an ranking of the 3 optimizers: The eras for all 20 repeats for each optimizer is collected and plotted using Scott-Knott algorithm.
-
 
 ```unix
 
@@ -214,32 +193,25 @@ Since MWS explores the search space (landscape) better that Simulated Annealing 
 * Using NSGA-II in the experiments can prove useful for comparing results. 
 
 ### Conclusion
+
 This experiment demonstrates that Differential Evolution performs better that Simulated Annealing and MaxWalkSat on an average. Since it improves current candidate solutions to generate new ones, it is able to explore the search space more effectively. Also MaxWalkSat performs better than SA due to the use of local search 
 
 ### Reference
 [1] Storn, R.; Price, K. (1997). "Differential evolution - a simple and efficient heuristic for global optimization over continuous spaces". Journal of Global Optimization 11: 341-359. doi:10.1023/A:1008202821328.
 
-
 [2] Storn, R. (1996). "On the usage of differential evolution for function optimization". Biennial Conference of the North American Fuzzy Information Processing Society (NAFIPS). pp. 519-523.
-
 
 [3] K. Deb, A. Pratap, S. Agarwal, and T. Meyarivan. 2002. A fast and elitist multiobjective genetic algorithm: NSGA-II. Trans. Evol. Comp 6, 2 (April 2002), 182-197. DOI=http://dx.doi.org/10.1109/4235.996017
 
-
 [4] Eckart Zitzler and Simon Kunzli Indicator-Based Selection in Multiobjective Search, Proceedings of the 8th International Conference on Parallel Problem Solving from Nature (PPSN VIII) September 2004, Birmingham, UK
-
 
 [5] Krall J., ,Menzies T. , Davies M.2015. Geometric Active Learning for Search-Based Software Engineering. IEEE Computer Society
 
-
 [6] Salam Sayyad, Tim Menzies, and Hany Ammar, On the Value of User Preferences in Search-Based Software Engineering: A Case Study in Software Product Lines, ICSE 2013.
-
 
 [7] Jelihovschi, Enio G., José Cláudio Faria, and Ivan Bezerra Allaman. "ScottKnott: a package for performing the Scott-Knott clustering algorithm in R." TEMA (São Carlos) 15.1 (2014): 3-17.
 
-
 [8] Automated Software Engineering Fall’16 notes: https://github.com/txt/ase16/ 
-
 
 [9] It's the Effect Size, Stupid: http://www.leeds.ac.uk/educol/documents/00002182.htm 
 
