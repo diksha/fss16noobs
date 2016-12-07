@@ -158,6 +158,8 @@ rank ,         name ,    med   ,  iqr
 
 ```
 
+<img src="images/code7run.png" alt="Drawing"/>
+
 Below is an ranking of the 3 optimizers: The eras for all 20 repeats for each optimizer is collected and plotted using Scott-Knott algorithm.
 
 ```unix
