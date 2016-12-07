@@ -8,6 +8,20 @@ Using the statistical machinery discussed in class (Scott-Knott, a12, bootstrap)
 
 Also comment on the computation cost of tuning.<br>
 
+### Keywords
+
+- Binary domination - A candidate is said to binary dominate another candidate if its objective values are better in at least one instance and never worse
+- Candidates - An instance of a solution. A candidate has decisions and fitness
+- Decisions - Independent variables that are properties of every candidate and used to derive fitness
+- Hypervolume - A set of candidates dominated by the pareto frontier
+- Fitness - A measure of optimality of a candidate based on it's objective values
+- DTLZ - A family of functions that can output multi-objective functions that should be minimized and are optimum at a particular profile
+- Objectives - A derived value that can be minimized, maximised or converged to a value to determine how fit a candidate is
+- Pareto Frontier - A set of candidates that dominate all other candidates
+- Selection - The process of selecting a fit candidate from a generation
+- Mutation - The process of randomly varying decision values in a candidate
+- Crossover - The process of merging two candidates to produce two children
+
 ### Introduction
 
 **Differential Evolution**<br>
@@ -27,6 +41,14 @@ The GA implementation is diverse. It (or previous versions of it) has been used 
 **Scott-Knott**<br>
 
 Scott-Knott (SK) is a hierarchical clustering algorithm used as an exploratory data analysis tool. It was designed to help researchers working with an ANOVA experiment, wherein the comparison of treatment means is an important step in order, to find distinct homogeneous groups of those means whenever the situation leads to a significant F-test.<br>
+
+ The multiple comparison procedures commonly used to solve this problem usually divide the set of treatment means into groups that are not completely distinct. Therefore, many treatments end up belonging to different groups simultaneously, this is called overlapping [6].
+
+In fact, as the number of treatments increases, so do the number of overlappings making it difficult for the experimental users to distinguish the real groups to which the treatments should belong. In this case, the division of treatments in completely distinct groups is the most important solution. Even though the goal of multiple comparison methods is an all-pair comparison, not a division of the treatment means into groups, biologists, plant breeders and many others expect those tests to make that divison in groups.
+
+The possibility of using cluster analysis in place of multiple comparison procedures was suggested by [15] since the results of cluster type analysis, represent a type of solution for dividing treatments into distinct groups.
+
+The SK algorithm is a hierarchical cluster analysis approach used to partition treatments into distinct groups. Many other hierarchical cluster analysis approaches have been proposed since Scott, A.J. and Knott, M. [18] published their results, such as, for example [13], [9], and [6]. However, the SK has been the most widely used approach due to its simple intuitive appeal, and also the good results it always provides [12, 4, 11, 14].
 
 **Pareto-frontier**<br>
 
@@ -78,6 +100,37 @@ def bdom(self):
                 self.pop_pareto.append(candidate1)        
 
 ```
+
+rdivDemo
+
+```
+def rdivDemo(data):
+  def zzz(x):
+    return int(100 * (x - lo) / (hi - lo + 0.00001))
+  data = map(lambda lst:Num(lst[0],lst[1:]),
+             data)
+  print("")
+  ranks=[]
+  for x in scottknott(data,useA12=True):
+    ranks += [(x.rank,x.median(),x)]
+  all=[]
+  for _,__,x in sorted(ranks): all += x.all
+  all = sorted(all)
+  lo, hi = all[0], all[-1]
+  line = "----------------------------------------------------"
+  last = None
+  formatStr = '%%4s , %%%ss ,    %%s   , %%4s ' %  The.text
+  print((formatStr  % \
+               ('rank', 'name', 'med', 'iqr')) + "\n"+ line)
+  for _,__,x in sorted(ranks):
+    q1,q2,q3 = x.quartiles()
+    print((formatStr % \
+                 (x.rank+1, x.name, q2, q3 - q1))  + \
+              xtile(x.all,lo=lo,hi=hi,width=30,show="%5.2f"))
+    last = x.rank 
+```
+
+
 
 ### Experiments
 - GA program is run 20 times for each Model (DTLZ1/3/5/7), Objectives (2,4,6,8), and Decisions(10,20,40)
