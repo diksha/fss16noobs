@@ -49,10 +49,13 @@ Ref: http://www.scielo.br/scielo.php?script=sci_arttext&pid=S2179-84512014000100
 
 **DTLZ1**
   <img src="images/DTLZ1.png" alt="Drawing"/>
+  
 **DTLZ2**
   <img src="images/DTLZ2.png" alt="Drawing"/>
+  
 **DTLZ3**
   <img src="images/DTLZ3.png" alt="Drawing"/>
+  
 **DTLZ4**
   <img src="images/DTLZ4.png" alt="Drawing"/>
 
