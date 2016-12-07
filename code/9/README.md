@@ -47,16 +47,16 @@ Ref: http://www.scielo.br/scielo.php?script=sci_arttext&pid=S2179-84512014000100
 - We can see that in most of the cases, the tuned optimizer runs better. Using DE has improved the quality of input parameters to GA. 
 - DTLZ7-2-10 gave the best solution with hypervolume of 0.98
 
-<br> **DTLZ1** 
-<img src="images/DTLZ1.png" alt="Drawing"/>
-<br> **DTLZ2**
-<img src="images/DTLZ2.png" alt="Drawing"/>
-<br> **DTLZ3**
-<img src="images/DTLZ3.png" alt="Drawing"/>
-<br> **DTLZ4**
-<img src="images/DTLZ4.png" alt="Drawing"/>
+**DTLZ1**
+  <img src="images/DTLZ1.png" alt="Drawing"/>
+**DTLZ2**
+  <img src="images/DTLZ2.png" alt="Drawing"/>
+**DTLZ3**
+  <img src="images/DTLZ3.png" alt="Drawing"/>
+**DTLZ4**
+  <img src="images/DTLZ4.png" alt="Drawing"/>
 
 ### Screenshot
 
-<br> **Code running**
-<img src="images/screenshot.png" alt="Drawing"/>
+**Code running**
+  <img src="images/screenshot.png" alt="Drawing"/>
