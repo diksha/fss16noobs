@@ -17,17 +17,25 @@ DE is used for multidimensional real-valued functions but does not use the gradi
 
 DE optimizes a problem by maintaining a population of candidate solutions and creating new candidate solutions by combining existing ones according to its simple formulae, and then keeping whichever candidate solution has the best score or fitness on the optimization problem at hand. In this way the optimization problem is treated as a black box that merely provides a measure of quality given a candidate solution and the gradient is therefore not needed.<br>
 
-Ref: Class notes<br>
 
 **Genetic Algorithm**<br>
 In computer science and operations research, a genetic algorithm (GA) is a metaheuristic inspired by the process of natural selection that belongs to the larger class of evolutionary algorithms (EA). Genetic algorithms are commonly used to generate high-quality solutions to optimization and search problems by relying on bio-inspired operators such as mutation, crossover and selection<br>
+Genetic algorithms (GA) have proven a good alternative to Monte Carlo type optimization methods for global structure and materials properties optimization <br>
 
-Ref: Wikipedia<br>
+The GA implementation is diverse. It (or previous versions of it) has been used in publications with differing subjects such as structure of gold clusters on surfaces, composition of alloy nanoparticles, ammonia storage in mixed metal ammines and more. The implementation is structured such that it can be tailored to the specific problem investigated and to the computational resources available (single computer or a large computer cluster).<br>
 
 **Scott-Knott**<br>
 
 Scott-Knott (SK) is a hierarchical clustering algorithm used as an exploratory data analysis tool. It was designed to help researchers working with an ANOVA experiment, wherein the comparison of treatment means is an important step in order, to find distinct homogeneous groups of those means whenever the situation leads to a significant F-test.<br>
-Ref: http://www.scielo.br/scielo.php?script=sci_arttext&pid=S2179-84512014000100002 <br>
+
+**Pareto-frontier**<br>
+
+For a given system, the Pareto frontier or Pareto set is the set of parameterizations (allocations) that are all Pareto efficient. Finding Pareto frontiers is particularly useful in engineering. By yielding all of the potentially optimal solutions, a designer can make focused tradeoffs within this constrained set of parameters, rather than needing to consider the full ranges of parameters.<br>
+
+**Dominance Comparator**<br>
+
+We used binary over continuous domination domination since continuous domination did not scale well for the large magnitude of runs performed. As the same comparison operators would be used for both tuned and untuned runs we are measuring the difference in results by focussing more on the delta factor between the two runs than the actual values. <br>
+
 
 ### Implementation
 
@@ -36,6 +44,23 @@ Ref: http://www.scielo.br/scielo.php?script=sci_arttext&pid=S2179-84512014000100
 - Dominance Comparator- We used BDOM because CDOM was too slow for large magnitude of runs
 - As new populations are created, pareto frontier is updated
 - Objective function for GA is the value of hypervolume for resulting generation.
+
+Main function (which looks like any other evolutionary optimizer) creates an frontier, tries to update it, stopping if we are good enough:
+
+`def de(max     = 100,  # number of repeats 
+           np      = 100,  # number of candidates
+           f       = 0.75, # extrapolate amount
+           cf      = 0.3,  # prob of cross-over 
+           epsilon = 0.01
+         ):
+      frontier = [candidate() for _ in range(np)] 
+      for k in range(max):
+        total,n = update(f,cf,frontier)
+        if total/n > (1 - epsilon): 
+          break
+      return frontier`
+      
+
 
 ### Experiments
 - GA program is run 20 times for each Model (DTLZ1/3/5/7), Objectives (2,4,6,8), and Decisions(10,20,40)
@@ -62,9 +87,29 @@ DTLZ5
 DTLZ7
 
   <img src="images/DTLZ7.png" alt="Drawing"/>
+  
+### Threads to validity
+
+Pareto frontier generated in this case is using binary domination. However, this results in poor quality of pareto_frontier. Although because of bdom, the execution is faster, it doesn't give the best solution. Also, we can see in the results that the tuned GA does not always give better solution. Therefore, we should run it multiple times to get the best solution for the tuned GA as well.
+
+### Future Work
+
+As we have seen, we can use some other tournament selection method to generate the pareto_frontier. This should hopefully give better solution. Also, we should run the algorithm multiple times to get the best tuned GA parameters. Because we have seen that not always, the tuned GA gives better solution than untuned GA.
+
+### Conclusion
+
+We concluded that in most of the cases tuned GA gives better solution. However this improvement comes with a cost. We need to first run DE to get the ga parameters and then run GA. This slows down the algorithm a lot. Also if we use another tournament selection method, the run time might be even longer. Number of computations increases and that is the cost of tuning
 
 ### Screenshot
 
 Code running
 
   <img src="images/screenshot.png" alt="Drawing"/>
+  
+### References
+
+http://www.scielo.br/scielo.php?script=sci_arttext&pid=S2179-84512014000100002 <br>
+https://en.wikipedia.org/wiki/Genetic_algorithm <br>
+https://github.com/txt/ase16/blob/master/doc/de.md <br>
+https://github.com/txt/ase16/blob/master/doc/stats.md <br>
+https://wiki.fysik.dtu.dk/ase/ase/ga.html <br>
