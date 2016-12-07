@@ -47,7 +47,8 @@ We used binary over continuous domination domination since continuous domination
 
 Main function (which looks like any other evolutionary optimizer) creates an frontier, tries to update it, stopping if we are good enough:
 
-`def de(max     = 100,  # number of repeats 
+```
+def de(max     = 100,  # number of repeats 
            np      = 100,  # number of candidates
            f       = 0.75, # extrapolate amount
            cf      = 0.3,  # prob of cross-over 
@@ -58,9 +59,27 @@ Main function (which looks like any other evolutionary optimizer) creates an fro
         total,n = update(f,cf,frontier)
         if total/n > (1 - epsilon): 
           break
-      return frontier`
+      return frontier
+      ```
       
+Binary Dominator
 
+```
+:
+
+def bdom(self):
+    candidates = self.candidates
+        n = self.num_candidates
+        for candidate1 in candidates:
+            can_dominates_all = True
+            for candidate2 in candidates:
+                if candidate2 > candidate1:
+                    can_dominates_all = False
+                    break
+            if can_dominates_all:
+                self.pop_pareto.append(candidate1)        
+
+```
 
 ### Experiments
 - GA program is run 20 times for each Model (DTLZ1/3/5/7), Objectives (2,4,6,8), and Decisions(10,20,40)
