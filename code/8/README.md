@@ -96,7 +96,7 @@ python main.py
 ### Experiments
 - GA program is run 20 times for each Model (DTLZ1/3/5/7), Objectives (2,4,6,8), and Decisions(10,20,40)
 - This result is input to the rdivDemo function in stats.py
-- Results(Hypervolumes) were obtained from the stats that we have taken the median of and plotted into the graphs
+- Results(Hypervolumes) were obtained from the statistics that we have taken the median of and plotted into the graphs
 
 ### Results
 
@@ -105,7 +105,7 @@ python main.py
 
 DTLZ1
 
-  <img src="images/dtlz1-bdom.png" alt="Drawing"/>  <img src="images/dtlz1-cdom.png" alt="Drawing"/>
+  <img src="images/dtlz1-bdom.png"=25x alt="Drawing" />  <img src="images/dtlz1-cdom.png" alt="Drawing"/>
   
 DTLZ3
 
