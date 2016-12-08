@@ -2,6 +2,8 @@
 > (Learning when enough is enough)
 
 #### Running the source code
+The main code is present in main.py Python file. DTLZ7 model is implemented in DTLZ7.py and cdom.py contains methods to compute Continuous Domination loss. Following is the simple command to run the main program.
+
 $ python main.py
 
 ### Abstract
