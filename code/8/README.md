@@ -103,19 +103,19 @@ python main.py
 
 DTLZ1
 
-  <img src="images/DTLZ1.png" alt="Drawing"/>
+  <img src="images/dtlz1-bdom.png" alt="Drawing"/>  <img src="images/dtlz1-cdom.png" alt="Drawing"/>
   
 DTLZ3
 
-  <img src="images/DTLZ3.png" alt="Drawing"/>
+  <img src="images/dtlz3-bdom.png" alt="Drawing"/>  <img src="images/dtlz3-cdom.png" alt="Drawing"/>
   
 DTLZ5
 
-  <img src="images/DTLZ5.png" alt="Drawing"/>
+  <img src="images/dtlz5-bdom.png" alt="Drawing"/>  <img src="images/dtlz5-cdom.png" alt="Drawing"/>
   
 DTLZ7
 
-  <img src="images/DTLZ7.png" alt="Drawing"/>
+  <img src="images/dtlz7-bdom.png" alt="Drawing"/>  <img src="images/dtlz7-cdom.png" alt="Drawing"/>
   
 ### Threads to validity
 We found out that optimizing various DTLZ might result in faster and better results. So, the DTLZ code which we implemented might not be the best one and may need more optimization to give better results. We measured the performance based on just the hypervolume which can be a bit misleading as there can be various other metrics to measure the performance of these algorithms. Also, continuous domination should perform better than binary domination in most cases, but from our results it is not evident.
