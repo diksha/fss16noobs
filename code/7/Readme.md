@@ -1,7 +1,9 @@
 ## Early termination: Simulated annealing, MaxWalkSat and Differential Evolution for DTLZ7 model.
 > (Learning when enough is enough)
 
-#### Running the source
+#### Running the source code
+The main code is present in main.py Python file. DTLZ7 model is implemented in DTLZ7.py and cdom.py contains methods to compute Continuous Domination loss. Following is the simple command to run the main program.
+
 $ python main.py
 
 ### Abstract
@@ -172,6 +174,7 @@ Below is an ranking of the 3 optimizers: The eras for all 20 repeats for each op
      2 ,           SA ,    14.22  ,  1.98 (               |----*-        ), 13.19,  14.21,  15.52
 ```
 
+#### Inferences
 
 The count of early terminations and ranks indicate that DE performs better than MWS and SA. Reason for this is based on the observation that unlike other 2 methods, DE uses a set of candidate solutions (called frontier) and improves them iteratively. The results also indicate that if the number of eras is increased, DE will often terminate much early than others, which can save huge computation cost.
 
