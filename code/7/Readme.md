@@ -81,6 +81,10 @@ Krall's Bstop method:
 ##### Type 3 comparator
 For type3, we use effect size + hypothesis test (bootstrap) to judge no improvement in final era of multiple optimizers. 500 bootstraps was used with A12 and Scott-Knott. The stat.py contains rdivdemo method that tabulates the results in following manner showing median and inter-quartile range.
 
+##### DTLZ7 model
+
+<img src="images/dtlz7_model.png" alt="DTLZ7 model"/>
+
 ### Results
 
 Number of early terminations achieved by the 3 optimizers:
@@ -182,7 +186,8 @@ Since MWS explores the search space (landscape) better that Simulated Annealing 
 
 ### Threats to Validity
 
-* The performance comparison for the three optimizer in this experiment is only done on DTLZ7 model. The results obtained here are likely to be different when run on different models.
+* The performance comparison for the three optimizer in this experiment is only done on 
+7 model. The results obtained here are likely to be different when run on different models.
 
 
 * Increasing the number of objectives and decisions can produce different results as compared to this experiments. Hence it should be concluded from this experiment that DE will perform better than the other two in all scenarios.
