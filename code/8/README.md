@@ -120,7 +120,7 @@ DTLZ7
   <img src="images/dtlz7-bdom.png" alt="Drawing"/>  <img src="images/dtlz7-cdom.png" alt="Drawing"/>
   
 ### Threads to validity
-We found out that optimizing various DTLZ might result in faster and better results. So, the DTLZ code which we implemented might not be the best one and may need more optimization to give better results. We measured the performance based on just the hypervolume which can be a bit misleading as there can be various other metrics to measure the performance of these algorithms. Also, continuous domination should perform better than binary domination in most cases, but from our results it is not evident.
+We found out that optimizing various DTLZ might result in faster and better results. So, the DTLZ code which we implemented might not be the best one and may need more optimization to give better results. We measured the performance based on just the hypervolume which can be a bit misleading as there can be various other metrics to measure the performance of these algorithms. Some graphs show abrupt results as we can see in case of DTLZ5-CDOM.
 
 ### Future Work
 - We can optimize the algorithms (DTLZ and NSGA-II) to generate more accurate and fast output.
