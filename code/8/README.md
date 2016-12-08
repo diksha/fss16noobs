@@ -130,7 +130,7 @@ We found out that optimizing various DTLZ might result in faster and better resu
 ### Conclusion
 We concluded that as the number of objectives increase, the Binary Domination performs worse for increasing number of objectives. Although continuous domination performs better than binary domination with increasing number of objectives, the results are not that much far apart so as to decide which one is superior as the running time of both of these was almost the same and takes long.
 
-### Screenshot
+### Screenshots
 
 Code running
 
