@@ -130,7 +130,10 @@ def rdivDemo(data):
     last = x.rank 
 ```
 
-
+- How to run code
+```
+python main.py
+```
 
 ### Experiments
 - GA program is run 20 times for each Model (DTLZ1/3/5/7), Objectives (2,4,6,8), and Decisions(10,20,40)
