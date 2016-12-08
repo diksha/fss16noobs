@@ -4,6 +4,8 @@ Extend the Genetic Algorithm (GA) such that it implements two variants of the NS
 - Binary Domination with cuboid sorting
 - Continuous Domination
 
+Run python main.py to run the experiments.
+
 ### Abstract
 In this study, we have implemented NSGA-II (Non-Dominated Sorting Genetic Algorithm-II). We have basically extended the Genetic Algorithm (GA) and implemented the two variants of NSGA-II over it, i.e. Binary Domination (BDOM) with cuboid sorting and Continuous Domination (CDOM). This genetic algorithm is run on each of DTLZ 1 , 3, 5 , 7 each time with 2,4,6,8 objectives and each of 10, 20 , 40 decisions. The analysis of the performance of this algorithm is done using the hypervolume function where we have measured the hypervolume for 20 iterations and took a median of those values. Then, we plotted these results on bar charts to compare the performance and application of this algorithm on different variants of DTLZ. We have also used these results to compare the performance of BDOM and CDOM when run on the same input parameters.
 
