@@ -131,8 +131,9 @@ def rdivDemo(data):
 ```
 
 - How to run code
+The main Python source for this experiment is present in code9.py. To run the program, simply execute following command in the terminal.
 ```
-python main.py
+python code9.py
 ```
 
 ### Experiments
